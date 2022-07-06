@@ -2,7 +2,7 @@
 YouTube Comment Sentiment Analysis
 
 ### Steps followed:
-### STEP 1: Scraping Comments:
+### STEP 1: SCRAPING COMMENTS & MOUNTING GOOGLE DRIVE ON GOOGLE COLAB:
 ###### Scraping comments from a particular sidemen youtube video. 
 ###### One drawback: was not able to take very popular vids with comments > 60000 as then it would take the google script to execute for more than 6 minutes which automatically terminates it.
 ###### Firstly extract comments without replies so that they don't affect the overall sentiment of the general comment section & due to this also, then number of comments on youtube video differs as from what we extracted because we are not extracting the replies.
@@ -11,12 +11,11 @@ YouTube Comment Sentiment Analysis
 ###### Verify the order of comments from the youtube video after sorting it by newest first.
 ###### It extracted 25665 comments in 137 seconds at a rate of 188 comments per second. 
 ###### Download the google sheet as .csv & transfer it on your google drive.
+###### Mounting the google drive on the google colab & continuing coding with the extracted dataset further.
 
-### STEP 2: Mounting the google drive on the google colab & continuing coding with the extracted dataset further.
 
-### STEP 3: Shuffling the dataset
-
-### STEP 4: DATA PREPROCESSING:
+### STEP 2: DATA PREPROCESSING:
+###### First we shuffle the dataset.
 ###### The most prominent step while building any machine learning model is data preprocessing as it will directly affect the result of your model. The more you pre-process the data, the more accurate your model performs
 ##### a.) DATA LABELLING:
 ###### The dataset is unlabelled because of using API, you can only extract the comments but not the polarity. Polarity is something that can identify the emotion of a particular sentence by using the words present in that. This can be done using the TextBlob module of python. The code will demonstrate the finding of the polarity of all the comments.
