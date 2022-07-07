@@ -79,7 +79,7 @@
 
 
 ##### CHALLENGES FACED:
-###### In extracting comments out of YouTube
+###### In extracting comments out of YouTube.
 ###### Language barrier, moved on to some english specific vids.
 
 
