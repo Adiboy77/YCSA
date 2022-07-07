@@ -5,7 +5,6 @@ function scrapeCommentsWithReplies(){
   var nextPageToken=undefined;
   
   while(1){
-   
       var data = YouTube.CommentThreads.list('snippet', {videoId: vid, maxResults: 100, pageToken: nextPageToken})
       nextPageToken=data.nextPageToken
       for (var row=0; row<data.items.length; row++) {
@@ -37,8 +36,6 @@ function scrapeCommentsWithReplies(){
       break;
     }
 }
-
 var newSheet=ss.insertSheet(ss.getNumSheets())
 newSheet.getRange(1, 1,result.length,9).setValues(result)
-
 }
