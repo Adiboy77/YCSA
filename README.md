@@ -47,14 +47,29 @@ YouTube Comment Sentiment Analysis
 ###### Encoding: Encode the entire document creating a vector with the same length as of vocabulary.
 
 
-### STEP 3: SENTIMENT CLASSIFICATION:
+### STEP 3: TRAINING DATA & SENTIMENT CLASSIFICATION:
 ###### Now we have got the pre-processed data consisting of training (tf_train, y_train) and test (tf_test,y_test) dataset. So the next step is the selection of an appropriate machine learning algorithm for classification, i.e., Logistic Regression.
-##### LOGISTIC REGRESSION:
+##### a.) LOGISTIC REGRESSION:
 ###### It’s a predictive modeling algorithm for the classification where there is a labeled dataset with the categorical target variable. It falls into the category of the supervised machine learning algorithm.
 ###### It will help in predicting the probability of outcomes i.e. binary classification or multi-classification. Examples of logistic regression include spam classifier, customer churn prediction, tumor prediction, etc.
 ###### These are some of the famous examples of the same, while we can apply the same for other cases as in this instance of sentiment analysis, where there are two classes to classify i.e. either positive (1) or negative (-1).
 ###### The scikit learn is utilized to implement logistic regression for the sentiment classification.
 
+##### b.) ACCURACIES:
+###### Now after the model training, the accuracy score on the training dataset is 96.34 %, which implies your model is predicting 96.34 % accurate results, which is quite good. In the next step, we can discover the accuracy score on the test dataset,
+###### The accuracy of the model on the test dataset is 94.70 %, which means the model is predicting 94.70 % accurate results on the unseen dataset.
+###### Now we make predictions on the test dataset by using a model trained above.
+
+##### c.) CONFUSION MATRIX:
+###### It helps us to know about the performance of our model on the test dataset where we already have the output of the same.
+![image](https://user-images.githubusercontent.com/83705161/177708552-5d2ad141-fd08-42a9-bb45-b6707247428f.png)
+
+##### d.) CLASSIFICATION REPORT:
+###### This is another metric that will provide the quality of predictions by finding precision, recall, f1 score.
+
+##### e.) F1 - SCORE:
+###### It gives a better measure of classification events than the accuracy metric. It is equal to the harmonic mean of precision & recall. 
+###### Another advantage of this is, it provides a more precise evaluation than accuracy in imbalance class distribution but here in our case we found out F1 score to be 0.9428 which is less than the accuracy because our model was not imbalanced, as we had 16075 negatives (-1)s & 9590 positives (1)s.
 
 ### STEP 4: CONCLUSION:
 ###### A machine learning model has been trained for the sentiment analysis of the youtube comments followed by the pre-processing of the dataset. Preprocessing includes data labeling, lowercasing of the text, stopwords removal, data splitting, feature extraction.
