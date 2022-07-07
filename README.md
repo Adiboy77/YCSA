@@ -47,8 +47,19 @@ YouTube Comment Sentiment Analysis
 ###### Encoding: Encode the entire document creating a vector with the same length as of vocabulary.
 
 
-### STEP 5: SENTIMENT CLASSIFICATION:
-//TODO edit from here from : https://www.analyticssteps.com/blogs/sentiment-analysis-youtube-comments
+### STEP 3: SENTIMENT CLASSIFICATION:
+###### Now we have got the pre-processed data consisting of training (tf_train, y_train) and test (tf_test,y_test) dataset. So the next step is the selection of an appropriate machine learning algorithm for classification, i.e., Logistic Regression.
+##### LOGISTIC REGRESSION:
+###### It’s a predictive modeling algorithm for the classification where there is a labeled dataset with the categorical target variable. It falls into the category of the supervised machine learning algorithm.
+###### It will help in predicting the probability of outcomes i.e. binary classification or multi-classification. Examples of logistic regression include spam classifier, customer churn prediction, tumor prediction, etc.
+###### These are some of the famous examples of the same, while we can apply the same for other cases as in this instance of sentiment analysis, where there are two classes to classify i.e. either positive (1) or negative (-1).
+###### The scikit learn is utilized to implement logistic regression for the sentiment classification.
+
+
+### STEP 4: CONCLUSION:
+###### A machine learning model has been trained for the sentiment analysis of the youtube comments followed by the pre-processing of the dataset. Preprocessing includes data labeling, lowercasing of the text, stopwords removal, data splitting, feature extraction.
+###### For the sentiment classification into two classes positive and negative, Logistic Regression, machine learning classification algorithm has been used & achieved an accuracy score of  96.34 % on training data and 94.70 % on test data, and the F1 score is 0.9428.
+
 
 
 #### References:
