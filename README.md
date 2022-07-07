@@ -1,7 +1,7 @@
 # YCSA
 ## YouTube Comment Sentiment Analysis
 
-### FINAL CONFUSION MATRIX:
+### CONFUSION MATRIX:
 ![image](https://user-images.githubusercontent.com/83705161/177708552-5d2ad141-fd08-42a9-bb45-b6707247428f.png)
 
 #### Steps followed are as follows:
