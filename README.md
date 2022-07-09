@@ -8,7 +8,13 @@
 
 ### STEP 1: SCRAPING COMMENTS & MOUNTING GOOGLE DRIVE ON GOOGLE COLAB:
 ##### Scraping comments from a particular sidemen youtube video, via pagination: https://dev.to/appwrite/this-is-why-you-should-use-cursor-pagination-4nh5
+
+#### PAGINATION:
 Pagination is used because: Pagination is used in some form in almost every web application to divide returned data and display it on multiple pages within one web page. Pagination also includes the logic of preparing and displaying the links to the various pages. Pagination can be handled client-side or server-side.
+Pagination is a strategy employed when querying any dataset that holds more than just a few hundred records. Thanks to pagination, we can split our large dataset into chunks ( or pages ) that we can gradually fetch and display to the user, thus reducing the load on the database. Pagination also solves a lot of performance issues both on the client and server-side! Without pagination, you'd have to load the entire chat history only to read the latest message sent to you.
+These days, pagination has almost become a necessity since every application is very likely to deal with large amounts of data. This data could be anything from user-generated content, content added by administrators or editors, or automatically generated audits and logs. As soon as your list grows to more than a few thousand items, your database will take too long to resolve each request and your front-end's speed and accessibility will suffer. As for your users, they will experience frequent buffers loaded onto their screens.
+
+
 ##### One drawback: was not able to take very popular vids with comments > 60000 as then it would take the google script to execute for more than 6 minutes which automatically terminates it.
 ##### Firstly extract comments without replies so that they don't affect the overall sentiment of the general comment section & due to this also, then number of comments on youtube video differs as from what we extracted because we are not extracting the replies.
 ##### Add youtube data API v3 under services in new editor and under resources in old editor.
