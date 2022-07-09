@@ -1,15 +1,19 @@
 <div style="text-align: justify"> 
 
 # YCSA
-## YouTube Comment Sentiment Analysis
+>YouTube Comment Sentiment Analysis
+
+<br />
 
 ### CONFUSION MATRIX:
 ![image](https://user-images.githubusercontent.com/83705161/177708552-5d2ad141-fd08-42a9-bb45-b6707247428f.png)
 
-### Steps followed:
+<br />
 
-## STEP 1: SCRAPING COMMENTS & MOUNTING GOOGLE DRIVE ON GOOGLE COLAB:
-###### Scraping comments from a particular sidemen youtube video using YouTube Data API 3.
+>### Steps followed:
+
+>## STEP 1: SCRAPING COMMENTS & MOUNTING GOOGLE DRIVE ON GOOGLE COLAB:
+>###### Scraping comments from a particular sidemen youtube video using YouTube Data API 3.
 1. Firstly chose to extract comments without replies so that they don't affect the overall sentiment of the general comment section & due to this also, then number of comments on youtube video differs as from what we extracted because we are not extracting the replies.
 2. Add youtube data API v3 under services in new editor and under resources in old editor.
 3. Run the .gs code to extract comment out of video on to the google sheet.
@@ -21,7 +25,7 @@
 <br />
 
 
-## STEP 2: DATA PREPROCESSING:
+>## STEP 2: DATA PREPROCESSING:
 ###### First we shuffle the dataset. The most prominent step while building any machine learning model is data preprocessing as it will directly affect the result of your model. The more you pre-process the data, the more accurate your model performs
 ### a.) DATA LABELLING:
 1. The dataset is unlabelled because of using API, you can only extract the comments but not the polarity. 
@@ -51,14 +55,14 @@
 ### f.) FEATURE EXTRACTION FROM TEST DATA
 1. Now we extract features out of text data, i.e. conversion to integer values or floating-point values as a machine learning model can’t be applied directly to the text data. 
 2. Use the CountVectorizer module by scikit learn, which will create a vocabulary from the text data, as it will store the count of each word every time it appears in the text. 
-###### CountVectorizer mainly performs three basic steps:- 
+>###### CountVectorizer mainly performs three basic steps:- 
 1. Tokenization: Tokenize the text into words,
 2. Vocabulary: Build vocabulary with all the words present in the text/document,
 3. Encoding: Encode the entire document creating a vector with the same length as of vocabulary.
 
 <br />
 
-## STEP 3: TRAINING DATA & SENTIMENT CLASSIFICATION:
+>## STEP 3: TRAINING DATA & SENTIMENT CLASSIFICATION:
 ###### Now we have got the pre-processed data consisting of training (tf_train, y_train) and test (tf_test,y_test) dataset. So the next step is the selection of an appropriate machine learning algorithm for classification, i.e., Logistic Regression.
 ### a.) LOGISTIC REGRESSION:
 1. It’s a predictive modeling algorithm for the classification where there is a labeled dataset with the categorical target variable. It falls into the category of the supervised machine learning algorithm.
@@ -84,16 +88,16 @@
 
 <br />
   
-## STEP 4: CONCLUSION:
+>## STEP 4: CONCLUSION:
 1. A machine learning model has been trained for the sentiment analysis of the youtube comments followed by the pre-processing of the dataset. Preprocessing includes data labeling, lowercasing of the text, stopwords removal, data splitting, feature extraction.
 2. For the sentiment classification into two classes positive and negative, Logistic Regression, machine learning classification algorithm has been used & achieved an accuracy score of  96.34 % on training data and 94.70 % on test data, and the F1 score is 0.9428.
 
 <br />
   
-### EXTRA INFO:
-#### a.) LAZY LOADING
+>### EXTRA INFO:
+>#### a.) LAZY LOADING
 ###### Lazy loading, which is the practice of delaying load or initialization of resources or objects until they're actually needed to improve performance and save system resources.
-#### b.) PAGINATION: 
+>#### b.) PAGINATION: 
 ###### In detail: https://dev.to/appwrite/this-is-why-you-should-use-cursor-pagination-4nh5
 1. Pagination is used in some form in almost every web application to divide returned data and display it on multiple pages within one web page. 
 2. Pagination also includes the logic of preparing and displaying the links to the various pages. Pagination can be handled client-side or server-side.
@@ -102,17 +106,13 @@
 
 <br /> 
   
-### CHALLENGES FACED:
+>### CHALLENGES FACED:
 1. In extracting comments out of YouTube.
 2. Language barrier, moved on to some english specific vids.
 3. One drawback: was not able to take very popular vids with comments > 60000 as then it would take the google script to execute for more than 6 minutes which automatically terminates it.
 
 <br />
   
-### VIDEO ANALYSED:
-###### https://www.youtube.com/watch?v=DUrBIxB1q0o
-
+>#### VIDEO ANALYSED: https://www.youtube.com/watch?v=DUrBIxB1q0o
 
 </div>
-
-
