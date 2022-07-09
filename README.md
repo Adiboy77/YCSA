@@ -102,7 +102,7 @@
 
 <br /> 
   
-#### CHALLENGES FACED:
+### CHALLENGES FACED:
 1. In extracting comments out of YouTube.
 2. Language barrier, moved on to some english specific vids.
 3. One drawback: was not able to take very popular vids with comments > 60000 as then it would take the google script to execute for more than 6 minutes which automatically terminates it.
@@ -110,7 +110,7 @@
 <br />
   
 ### VIDEO ANALYSED:
-https://www.youtube.com/watch?v=DUrBIxB1q0o
+###### https://www.youtube.com/watch?v=DUrBIxB1q0o
 
 
 </div>
