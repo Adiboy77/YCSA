@@ -7,7 +7,7 @@
 #### Steps followed are as follows:
 
 ### STEP 1: SCRAPING COMMENTS & MOUNTING GOOGLE DRIVE ON GOOGLE COLAB:
-##### Scraping comments from a particular sidemen youtube video, via pagination: https://www.seoptimer.com/blog/what-is-pagination/#What-use-pagination
+##### Scraping comments from a particular sidemen youtube video, via pagination: https://dev.to/appwrite/this-is-why-you-should-use-cursor-pagination-4nh5
 Pagination is used because: Pagination is used in some form in almost every web application to divide returned data and display it on multiple pages within one web page. Pagination also includes the logic of preparing and displaying the links to the various pages. Pagination can be handled client-side or server-side.
 ##### One drawback: was not able to take very popular vids with comments > 60000 as then it would take the google script to execute for more than 6 minutes which automatically terminates it.
 ##### Firstly extract comments without replies so that they don't affect the overall sentiment of the general comment section & due to this also, then number of comments on youtube video differs as from what we extracted because we are not extracting the replies.
