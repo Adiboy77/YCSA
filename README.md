@@ -9,14 +9,16 @@
 ### Steps followed:
 
 ## STEP 1: SCRAPING COMMENTS & MOUNTING GOOGLE DRIVE ON GOOGLE COLAB:
-###### Scraping comments from a particular sidemen youtube video
-2. Firstly extract comments without replies so that they don't affect the overall sentiment of the general comment section & due to this also, then number of comments on youtube video differs as from what we extracted because we are not extracting the replies.
-3. Add youtube data API v3 under services in new editor and under resources in old editor.
-4. Run the .gs code to extract comment out of video on to the google sheet.
-5. Verify the order of comments from the youtube video after sorting it by newest first.
-6. It extracted 25665 comments in 137 seconds at a rate of 188 comments per second. 
-7. Download the google sheet as .csv & transfer it on your google drive.
-8. Mounting the google drive on the google colab & continuing coding with the extracted dataset further.
+###### Scraping comments from a particular sidemen youtube video using YouTube Data API 3.
+1. Firstly chose to extract comments without replies so that they don't affect the overall sentiment of the general comment section & due to this also, then number of comments on youtube video differs as from what we extracted because we are not extracting the replies.
+2. Add youtube data API v3 under services in new editor and under resources in old editor.
+3. Run the .gs code to extract comment out of video on to the google sheet.
+4. Verify the order of comments from the youtube video after sorting it by newest first.
+5. It extracted 25665 comments in 137 seconds at a rate of 188 comments per second. 
+6. Download the google sheet as .csv & transfer it on your google drive.
+7. Mounting the google drive on the google colab & continuing coding with the extracted dataset further.
+
+<br />
 
 
 ## STEP 2: DATA PREPROCESSING:
@@ -54,6 +56,7 @@
 2. Vocabulary: Build vocabulary with all the words present in the text/document,
 3. Encoding: Encode the entire document creating a vector with the same length as of vocabulary.
 
+<br />
 
 ## STEP 3: TRAINING DATA & SENTIMENT CLASSIFICATION:
 ###### Now we have got the pre-processed data consisting of training (tf_train, y_train) and test (tf_test,y_test) dataset. So the next step is the selection of an appropriate machine learning algorithm for classification, i.e., Logistic Regression.
@@ -79,27 +82,34 @@
 1. It gives a better measure of classification events than the accuracy metric. It is equal to the harmonic mean of precision & recall. 
 2. Another advantage of this is, it provides a more precise evaluation than accuracy in imbalance class distribution but here in our case we found out F1 score to be 0.9428 which is less than the accuracy because our model was not imbalanced, as we had 16075 negatives (-1)s & 9590 positives (1)s.
 
+<br />
+  
 ## STEP 4: CONCLUSION:
 1. A machine learning model has been trained for the sentiment analysis of the youtube comments followed by the pre-processing of the dataset. Preprocessing includes data labeling, lowercasing of the text, stopwords removal, data splitting, feature extraction.
 2. For the sentiment classification into two classes positive and negative, Logistic Regression, machine learning classification algorithm has been used & achieved an accuracy score of  96.34 % on training data and 94.70 % on test data, and the F1 score is 0.9428.
 
-
+<br />
+  
 ### EXTRA INFO:
-#### PAGINATION: 
+#### a.) LAZY LOADING
+###### Lazy loading, which is the practice of delaying load or initialization of resources or objects until they're actually needed to improve performance and save system resources.
+#### b.) PAGINATION: 
 ###### In detail: https://dev.to/appwrite/this-is-why-you-should-use-cursor-pagination-4nh5
-1. Pagination is used because: Lazy loading, which is the practice of delaying load or initialization of resources or objects until they're actually needed to improve performance and save system resources.
-2. Pagination is used in some form in almost every web application to divide returned data and display it on multiple pages within one web page. 
-3. Pagination also includes the logic of preparing and displaying the links to the various pages. Pagination can be handled client-side or server-side.
-4. Pagination is a strategy employed when querying any dataset that holds more than just a few hundred records. Thanks to pagination, we can split our large dataset into chunks ( or pages ) that we can gradually fetch and display to the user, thus reducing the load on the database. Pagination also solves a lot of performance issues both on the client and server-side! Without pagination, you'd have to load the entire chat history only to read the latest message sent to you.
-5. These days, pagination has almost become a necessity since every application is very likely to deal with large amounts of data. This data could be anything from user-generated content, content added by administrators or editors, or automatically generated audits and logs. As soon as your list grows to more than a few thousand items, your database will take too long to resolve each request and your front-end's speed and accessibility will suffer. As for your users, they will experience frequent buffers loaded onto their screens.
+1. Pagination is used in some form in almost every web application to divide returned data and display it on multiple pages within one web page. 
+2. Pagination also includes the logic of preparing and displaying the links to the various pages. Pagination can be handled client-side or server-side.
+3. Pagination is a strategy employed when querying any dataset that holds more than just a few hundred records. Thanks to pagination, we can split our large dataset into chunks ( or pages ) that we can gradually fetch and display to the user, thus reducing the load on the database. Pagination also solves a lot of performance issues both on the client and server-side! Without pagination, you'd have to load the entire chat history only to read the latest message sent to you.
+4. These days, pagination has almost become a necessity since every application is very likely to deal with large amounts of data. This data could be anything from user-generated content, content added by administrators or editors, or automatically generated audits and logs. As soon as your list grows to more than a few thousand items, your database will take too long to resolve each request and your front-end's speed and accessibility will suffer. As for your users, they will experience frequent buffers loaded onto their screens.
 
-##### CHALLENGES FACED:
-###### In extracting comments out of YouTube.
-###### Language barrier, moved on to some english specific vids.
-###### One drawback: was not able to take very popular vids with comments > 60000 as then it would take the google script to execute for more than 6 minutes which automatically terminates it.
+<br /> 
+  
+#### CHALLENGES FACED:
+1. In extracting comments out of YouTube.
+2. Language barrier, moved on to some english specific vids.
+3. One drawback: was not able to take very popular vids with comments > 60000 as then it would take the google script to execute for more than 6 minutes which automatically terminates it.
 
-
-#### VIDEO ANALYSED:
+<br />
+  
+### VIDEO ANALYSED:
 https://www.youtube.com/watch?v=DUrBIxB1q0o
 
 
