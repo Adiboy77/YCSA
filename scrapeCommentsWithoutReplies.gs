@@ -6,7 +6,7 @@ function scrapeCommentsWithoutReplies(){
   /*
   The API uses the maxResults parameter to indicate how many items should be included in an API response.
   If additional results are available for a query, then the API response will contain either a nextPageToken property, a prevPageToken property, or both. Those properties' values can then be used to set the pageToken parameter to retrieve an additional page of results.
-  We do this for pagination: see More: https://www.seoptimer.com/blog/what-is-pagination/#What-use-pagination
+  We do this for pagination: see More: https://dev.to/appwrite/this-is-why-you-should-use-cursor-pagination-4nh5
   */
   while(1){
     var data = YouTube.CommentThreads.list('snippet', {videoId: vid, maxResults: 100, pageToken: nextPageToken})//maxResults is the chunks size
