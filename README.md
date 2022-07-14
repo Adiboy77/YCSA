@@ -10,7 +10,7 @@
 
 <br />
 
->### Steps followed:
+### Steps followed:
 
 >## STEP 1: SCRAPING COMMENTS & MOUNTING GOOGLE DRIVE ON GOOGLE COLAB:
 >###### Scraping comments from a particular sidemen youtube video using YouTube Data API 3.
@@ -95,9 +95,9 @@
 <br />
   
 >### EXTRA INFO:
->#### a.) LAZY LOADING
+#### a.) LAZY LOADING
 ###### Lazy loading, which is the practice of delaying load or initialization of resources or objects until they're actually needed to improve performance and save system resources.
->#### b.) PAGINATION: 
+#### b.) PAGINATION: 
 ###### In detail: https://dev.to/appwrite/this-is-why-you-should-use-cursor-pagination-4nh5
 1. Pagination is used in some form in almost every web application to divide returned data and display it on multiple pages within one web page. 
 2. Pagination also includes the logic of preparing and displaying the links to the various pages. Pagination can be handled client-side or server-side.
