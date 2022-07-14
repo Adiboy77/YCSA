@@ -15,12 +15,11 @@
 >## STEP 1: SCRAPING COMMENTS & MOUNTING GOOGLE DRIVE ON GOOGLE COLAB:
 >###### Scraping comments from a particular sidemen youtube video using YouTube Data API 3.
 1. Firstly chose to extract comments without replies so that they don't affect the overall sentiment of the general comment section & due to this also, then number of comments on youtube video differs as from what we extracted because we are not extracting the replies.
-2. Add youtube data API v3 under services in new editor and under resources in old editor.
-3. Run the .gs code to extract comment out of video on to the google sheet.
-4. Verify the order of comments from the youtube video after sorting it by newest first.
-5. It extracted 25665 comments in 137 seconds at a rate of 188 comments per second. 
-6. Download the google sheet as .csv & transfer it on your google drive.
-7. Mounting the google drive on the google colab & continuing coding with the extracted dataset further.
+2. Write the code to extract the comment out of video with the help of YouTube data API v3 & run it.
+3. Verify the order of comments from the youtube video after sorting it by newest first.
+4. As a result, it extracted 25665 comments in 137 seconds at a rate of 188 comments per second. 
+5. Download the data as .csv & save it on your google drive.
+6. Mount the google drive on the google colab & continue coding with the extracted dataset further.
 
 <br />
 
