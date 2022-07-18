@@ -12,7 +12,7 @@
 
 ### Steps followed:
 
->## STEP 1: SCRAPING COMMENTS & MOUNTING GOOGLE DRIVE ON GOOGLE COLAB:
+>## STEP 1: SCRAPING COMMENTS & MOUNTING DRIVE ON COLAB:
 >###### Scraping comments from a particular sidemen youtube video using YouTube Data API 3.
 1. Firstly chose to extract comments without replies so that they don't affect the overall sentiment of the general comment section & due to this also, then number of comments on youtube video differs as from what we extracted because we are not extracting the replies.
 2. Write the code to extract the comment out of video with the help of YouTube data API v3 & run it.
