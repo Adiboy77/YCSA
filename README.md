@@ -42,7 +42,7 @@
 ### d.) STOP WORDS
 1. It contains words of less importance, i.e., commonly used words like is, am, the, are, a, etc. as they don’t add any fruitful information that is required for analysis. 
 2. So, by removing these kinds of words, our data become more concise as having fewer features but significant. 
-3. The task of stopwords removal will be done using the nltk module as it provides a list of stopwords in different languages.
+3. The task of stopwords removal is done using the nltk module as it provides a list of stopwords in different languages.
 
 ### e.) DATA SPLITTING
 1. As of now, we are working with the one dataset, but for making predictions of sentiment analysis or can say that for testing the accuracy of the model trained, a test data set/validation data set would be required.
